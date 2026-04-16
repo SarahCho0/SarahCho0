@@ -95,9 +95,13 @@
 
 `Team + Individual Extension` &nbsp;|&nbsp; `175+ commits`
 
-Object detection → segmentation → perception-efficient 3D reconstruction from multi-angle images, deployed as a Gradio demo.
+> **SOTA 3D vision stack → deployed Gradio demo → independently extended with LLM**
 
-**Independently extended** with a Gemini 2.5 Flash LLM module: analyzes room photos, generates structured reports, and simulates furniture add / remove / swap across multiple angles.
+Full pipeline: **YOLOE** object detection → **SAM2** segmentation → **SigLIP** semantic grounding → **DUSt3R/MASt3R** multi-view depth estimation → **PE3R** perception-efficient 3D reconstruction — all chained end-to-end from multi-angle room photos.
+
+After the team project wrapped, **independently built a Gemini 2.5 Flash LLM module** on top: the model analyzes reconstructed room images, generates structured interior reports, and produces furniture simulation outputs — add, remove, or swap items across multiple angles — entirely unprompted by the course.
+
+**Why the stack matters:** DUSt3R/MASt3R and PE3R are among the most recent SOTA models in 3D scene reconstruction — integrating them into a deployable pipeline with LLM-driven simulation on top represents research-to-product execution at the cutting edge.
 
 `PyTorch` `SAM2` `SigLIP` `DUSt3R/MASt3R` `PE3R` `Gemini 2.5 Flash` `Gradio`
 
@@ -107,11 +111,17 @@ Object detection → segmentation → perception-efficient 3D reconstruction fro
 #### [카페 AI 키오스크 — Oji](https://github.com/SarahCho0/cafe_kiosk_prj)
 **Full-Stack AI Kiosk · Natural Language Ordering in 4 Languages**
 
-`Individual` &nbsp;|&nbsp; `332 menu items · 9 payment methods`
+`Individual` &nbsp;|&nbsp; `332 menu items · 9 payment methods · 7-step checkout`
 
-AI chatbot **Oji** handles end-to-end ordering — natural language → cart → 7-step checkout — in Korean, English, Chinese, and Japanese.
+> **Scraped real menu data → built RAG → wired GPT-4o-mini → full production-grade kiosk UI**
 
-Built on fully scraped Paik's Coffee menu (100% parsed with nutrition & allergy data). RAG via TF-IDF char n-gram cosine similarity. Includes abuse detection, staff-call triggers, coupon/point handling.
+AI chatbot **Oji** takes natural language orders in Korean, English, Chinese, and Japanese — managing cart state, handling edge cases, and guiding users through a complete 7-step checkout flow.
+
+**Built every layer from scratch:**
+- Scraped and parsed the full Paik's Coffee menu (**332 items**, 100% coverage including nutrition & allergy data)
+- Custom **TF-IDF char n-gram cosine similarity** RAG for robust menu matching across 4 languages
+- Abuse detection, staff-call triggers, coupon & point systems, 9 payment methods
+- Stateful multi-turn conversation with cart management and order correction
 
 `Python` `Streamlit` `GPT-4o-mini` `TF-IDF RAG` `BeautifulSoup4`
 
@@ -171,19 +181,15 @@ Full RAG system processing 10 years of Samsung Electronics audit reports (`.htm/
 
 `Individual` &nbsp;|&nbsp; `RTX 3090 · AMP Training · Google QuickDraw`
 
-Full ground-up reimplementation of §3.4 of the SketchGPT paper — no reference codebase, built entirely from the paper spec.
+> **No reference code. Built entirely from the paper spec.**
 
-**Architecture:** Decoder-only Transformer — **8 layers · 8 heads · d_model=512** — treating sketches as sequences of discrete stroke tokens rather than pixels. Pretrained on 10 vehicle classes from Google QuickDraw.
+Full reimplementation of §3.4 of the SketchGPT paper. Decoder-only Transformer (**8L · 8H · d=512**) treating sketches as stroke token sequences — not pixels. Pretrained on 10 Google QuickDraw vehicle classes.
 
-**The core challenge — category bleed:** A single model pretrained across multiple classes conflated visual features (cars bleeding into planes, bikes into motorcycles). Solved by **per-class fine-tuning**: the shared backbone captures universal stroke grammar; class-specific heads learn category-distinct generation patterns.
+**Core problem — category bleed:** A multi-class pretrained model conflated features across categories (cars → planes, bikes → motorcycles). Fixed with **per-class fine-tuning**: shared backbone learns universal stroke grammar; class heads learn category-specific patterns.
 
-**Full pipeline built from scratch:**
-- **Stroke-3 format preprocessing** — raw (x, y, pen_state) point sequences normalized and tokenized into primitive stroke units
-- **AMP training** with `torch.cuda.amp` for mixed-precision on RTX 3090 — ~2× memory efficiency enabling larger batch sizes
-- **Cosine LR scheduling** with warmup — stabilizes transformer training on sequential stroke data
-- **Class-conditional top-k sampling** at inference — temperature-controlled diversity with per-class quality tuning
+**Pipeline:** Stroke-3 preprocessing → primitive tokenization → AMP training (`torch.cuda.amp`, ~2× memory efficiency) → cosine LR with warmup → class-conditional top-k sampling at inference.
 
-**Why this stands out:** Generative models for sequential vector data (vs. raster images) require fundamentally different tokenization, loss functions, and sampling strategies — this project covers all of them end-to-end from a paper, not a tutorial.
+Generating sequential vector data requires fundamentally different tokenization, loss design, and sampling vs. raster models — all covered end-to-end from paper, not tutorial.
 
 `PyTorch` `CUDA` `Scikit-learn` `Google QuickDraw`
 
@@ -204,19 +210,11 @@ Full ground-up reimplementation of §3.4 of the SketchGPT paper — no reference
 
 `Individual`
 
-Single-file browser app — no server, no install, just open and talk to history.
+> **10+ figures · 5 conversation modes each · full per-figure visual theme**
 
-10+ historical figures (Einstein, Gandhi, Sejong, da Vinci, Cleopatra…), each with a **fully unique visual identity**: custom color palette, typography, and layout theme that changes the entire page on selection.
+Single-file browser app — open and talk to history, no install required. Each figure (Einstein, Gandhi, Sejong, da Vinci, Cleopatra…) has its own color palette, typography, and layout that transforms the entire page on selection.
 
-**4 conversation modes per figure:**
-- `Normal` — general conversation in character
-- `Deep Reflection` — philosophical, introspective responses
-- `Historical Context` — situates answers in the figure's era
-- `Teaching` — explains concepts as the figure would teach them
-
-**+ 1 figure-specific specialty mode** (e.g. Einstein → Thought Experiments, Sun Tzu → Strategic Analysis, Sejong → Linguistic Analysis)
-
-**EN/KR bilingual UI** — full language toggle with localized prompts per figure.
+4 shared modes (`Normal` · `Deep Reflection` · `Historical Context` · `Teaching`) + 1 figure-specific specialty (e.g. Einstein → Thought Experiments, Sun Tzu → Strategic Analysis). EN/KR bilingual with localized prompts per figure.
 
 `Vanilla JS` `HTML/CSS` `GPT-4o` `OpenAI API`
 
@@ -228,16 +226,11 @@ Single-file browser app — no server, no install, just open and talk to history
 
 `Individual` &nbsp;|&nbsp; `SNU AI Application Lab`
 
-Single-file browser app — drag, drop, and read. No install, no backend.
+> **18+ live themes · multi-image narrative sequencing · GPT-4o Vision**
 
-**18+ dynamic emotion themes** — selecting an emotion instantly transforms the entire page: background gradient, font family, color palette, and text mood all update live to match (e.g. Joy → warm yellows + rounded font; Melancholy → muted blues + serif).
+Single-file browser app — drag, drop, read. No install, no backend. Picking an emotion instantly transforms the page (gradient, font, palette) to match the mood (e.g. Joy → warm yellows; Melancholy → muted blues + serif).
 
-**Multi-image pipeline:**
-- Drag-and-drop upload with visual reordering
-- Order is preserved as narrative sequence — image 1 sets the scene, image N closes it
-- GPT-4o Vision analyzes **all images together** in a single prompt, generating one cohesive story rather than per-image captions
-
-**EN/KR toggle** — UI language and generated story language switch simultaneously.
+Multi-image drag-and-drop with order-preserving narrative: GPT-4o Vision analyzes all images together in one prompt for a single cohesive story — not per-image captions. EN/KR toggle.
 
 `Vanilla JS` `HTML/CSS` `GPT-4o Vision` `OpenAI API`
 
