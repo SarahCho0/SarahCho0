@@ -163,25 +163,16 @@ End-to-end financial ML pipeline:
 <td colspan="2" valign="top">
 
 #### [Samsung Audit RAG](https://github.com/njungyeon/samsung-audit-rag)
-**삼성전자 감사보고서 RAG · Raw HTML → Integrated Vector DB → Agentic Q&A**
+**End-to-end RAG Pipeline for Samsung Audit Reports — Raw HTML → Vector DB → Agentic Q&A**
 
 `Team (6)` &nbsp;|&nbsp; `10 years of audit reports · PostgreSQL + pgvector`
 
-삼성전자 감사보고서 10년치(`.htm/.html`)를 처음부터 끝까지 처리하는 완전한 RAG 시스템.
+Full RAG system processing 10 years of Samsung Electronics audit reports (`.htm/.html`) from scratch.
 
-**핵심 설계 결정 — 통합형 단일 DB:**
-외부 벡터 DB(Pinecone 등) 없이 **PostgreSQL + pgvector** 하나에 원문 메타데이터 + 임베딩을 통합 저장. 관리 복잡도 최소화.
-
-**파싱 난제 해결:** EUC-KR/CP949 HTML 디코딩 → 다중 폴백 파서 (`lxml → html5lib → html.parser`) → 구조화 JSON 생성
-
-**섹션 인식 청킹 전략:**
-- 재무제표: 표를 통째로 넣지 않고 row 단위로 묶어 chunk 생성
-- 주석: 주석 번호별 논리 섹션 분리 → 스택 기반 계층 파싱
-
-**Streamlit 듀얼 모드 UI:**
-- `RAG 스트리밍` — 검색 컨텍스트 기반 토큰 단위 스트리밍
-- `Agent (ReAct)` — Tool Calling + ReAct 루프 후 최종 답변 스트리밍
-  - Tools: `search_audit_report` · `get_specific_section` · `compare_years`
+- **Unified DB design**: no external vector DB — **PostgreSQL + pgvector** stores raw metadata + embeddings together, minimizing ops complexity
+- **Parsing resilience**: EUC-KR/CP949 decoding → triple-fallback parser (`lxml → html5lib → html.parser`) → structured JSON
+- **Section-aware chunking**: financial tables chunked by row groups; footnotes split by note number with stack-based hierarchical parsing
+- **Dual-mode Streamlit UI**: RAG streaming (token-by-token) + ReAct Agent mode with custom tools (`search_audit_report` · `get_specific_section` · `compare_years`)
 
 `Python` `PostgreSQL` `pgvector` `Streamlit` `OpenAI` `Docker` `Poetry`
 
