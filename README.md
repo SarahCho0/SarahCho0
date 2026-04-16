@@ -1,107 +1,235 @@
-<h1 align="center">Hi, I'm Hyeonju Cho 👋</h1>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=220&section=header&text=Hyeonju%20Cho&fontColor=ffffff&fontSize=52&fontAlignY=38&desc=AI%20Engineer%20%7C%20ML%20Researcher&descSize=20&descAlignY=60&descColor=e0e7ff" width="100%"/>
 
-<p align="center">
-  Python · AI/ML · Computer Vision · Generative Models · FinTech
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=SarahCho0&style=flat-square&color=grey" alt=""/>
-</p>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=6366F1&center=true&vCenter=true&width=640&lines=End-to-end+AI+Systems+Builder+🚀;3D+Vision+·+Generative+Models+·+FinTech;Research-level+models+→+Deployed+products;Paper+implementations+from+scratch+📄)](https://git.io/typing-svg)
 
----
+<br/>
 
-I build end-to-end AI systems — from 3D perception pipelines and generative models to RAG-based applications and quantitative finance tools.
-My work focuses on applying research-level models to real, usable products — with attention to both the math and the interface.
-Currently interested in multimodal AI, LLM integration, and financial ML.
+![Profile Views](https://komarev.com/ghpvc/?username=SarahCho0&style=for-the-badge&color=6366f1&label=PROFILE+VIEWS)
+&nbsp;
+[![GitHub followers](https://img.shields.io/github/followers/SarahCho0?style=for-the-badge&color=6366f1&labelColor=1e1b4b&label=FOLLOWERS)](https://github.com/SarahCho0)
+
+</div>
 
 ---
 
-## 🛠 Skills
+## 💡 About Me
 
-**Languages** &emsp; Python · JavaScript · HTML/CSS  
-**AI / ML** &emsp; PyTorch · Scikit-learn · TensorFlow · Transformers · SHAP  
-**Vision** &emsp; YOLO · SAM / SAM2 · SigLIP · DUSt3R / MASt3R · PE3R  
-**LLM / API** &emsp; OpenAI GPT-4o / GPT-4o-mini · Gemini 2.5 Flash · TF-IDF RAG  
-**App / UI** &emsp; Streamlit · Gradio · Vanilla JS (no-framework browser apps)  
-**Data** &emsp; Pandas · Polars · Numpy · Jupyter Notebook  
-**Tools** &emsp; Git · Conda · VS Code · CUDA (RTX 3090)
+> **I build end-to-end AI systems** — from 3D perception pipelines and generative models to RAG applications and quantitative finance tools.  
+> My edge: applying **research-level models to real, usable products** — with equal attention to the math *and* the interface.
+
+<table>
+<tr>
+  <td>🔭&nbsp;<b>Current Focus</b></td>
+  <td>Multimodal AI &amp; LLM integration</td>
+</tr>
+<tr>
+  <td>🧠&nbsp;<b>Signature Strength</b></td>
+  <td>Taking paper-level models all the way to deployed, production-ready systems</td>
+</tr>
+<tr>
+  <td>⚡&nbsp;<b>Differentiator</b></td>
+  <td>Strong on both the deep learning math <em>and</em> the user-facing interface</td>
+</tr>
+<tr>
+  <td>🌏&nbsp;<b>Languages</b></td>
+  <td>Korean · English — and building AI that speaks 4 more</td>
+</tr>
+</table>
 
 ---
 
-## 🔖 Projects
+## 🛠 Tech Stack
 
-### [YOLOE3R](https://github.com/SarahCho0/team6_yoloe3r) · [LLM Module](https://github.com/SarahCho0/yoloe3r_llm) &nbsp;`Team · Individual`
-> Multi-angle 3D reconstruction + LLM-powered interior simulation
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+**AI / ML**
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Transformers](https://img.shields.io/badge/🤗%20Transformers-FFD21E?style=for-the-badge&logoColor=black)
+![SHAP](https://img.shields.io/badge/SHAP-005F73?style=for-the-badge&logoColor=white)
+
+**Computer Vision**
+
+![YOLO](https://img.shields.io/badge/YOLO-00B4D8?style=for-the-badge&logoColor=white)
+![SAM2](https://img.shields.io/badge/SAM2-6366F1?style=for-the-badge&logoColor=white)
+![SigLIP](https://img.shields.io/badge/SigLIP-7C3AED?style=for-the-badge&logoColor=white)
+![DUSt3R](https://img.shields.io/badge/DUSt3R%2FMASt3R-4F46E5?style=for-the-badge&logoColor=white)
+![PE3R](https://img.shields.io/badge/PE3R-3730A3?style=for-the-badge&logoColor=white)
+
+**LLM / Generative AI**
+
+![GPT-4o](https://img.shields.io/badge/GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini%202.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![RAG](https://img.shields.io/badge/TF--IDF%20RAG-0EA5E9?style=for-the-badge&logoColor=white)
+
+**App / UI / Data**
+
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Polars](https://img.shields.io/badge/Polars-CD792C?style=for-the-badge&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![CUDA](https://img.shields.io/badge/CUDA%20RTX%203090-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+
+---
+
+## 🚀 Featured Projects
+
+### 🏆 Flagship
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### [YOLOE3R](https://github.com/SarahCho0/team6_yoloe3r) · [LLM Module ↗](https://github.com/SarahCho0/yoloe3r_llm)
+**Multi-angle 3D Reconstruction + LLM Interior Simulation**
+
+`Team + Individual Extension` &nbsp;|&nbsp; `175+ commits`
+
+Object detection → segmentation → perception-efficient 3D reconstruction from multi-angle images, deployed as a Gradio demo.
+
+**Independently extended** with a Gemini 2.5 Flash LLM module: analyzes room photos, generates structured reports, and simulates furniture add / remove / swap across multiple angles.
 
 `PyTorch` `SAM2` `SigLIP` `DUSt3R/MASt3R` `PE3R` `Gemini 2.5 Flash` `Gradio`
 
-Object detection, segmentation, and perception-efficient 3D reconstruction from multi-angle inputs — deployed as a Gradio demo. Extended independently with a Gemini-powered LLM module that analyzes room images, generates structured reports, and produces multi-angle furniture simulation outputs (add / remove / change). 175+ commits.
+</td>
+<td width="50%" valign="top">
 
----
+#### [카페 AI 키오스크 — Oji](https://github.com/SarahCho0/cafe_kiosk_prj)
+**Full-Stack AI Kiosk · Natural Language Ordering in 4 Languages**
 
-### [5지는 카페 AI 키오스크](https://github.com/SarahCho0/cafe_kiosk_prj) &nbsp;`Individual`
-> Full-stack AI kiosk with natural language ordering in 4 languages
+`Individual` &nbsp;|&nbsp; `332 menu items · 9 payment methods`
+
+AI chatbot **Oji** handles end-to-end ordering — natural language → cart → 7-step checkout — in Korean, English, Chinese, and Japanese.
+
+Built on fully scraped Paik's Coffee menu (100% parsed with nutrition & allergy data). RAG via TF-IDF char n-gram cosine similarity. Includes abuse detection, staff-call triggers, coupon/point handling.
 
 `Python` `Streamlit` `GPT-4o-mini` `TF-IDF RAG` `BeautifulSoup4`
 
-AI chatbot **Oji** takes natural language orders, manages a cart, and guides a 7-step checkout flow — across Korean, English, Chinese, and Japanese. Built on real Paik's Coffee menu data (332 items, 100% parsed with nutrition/allergy info). RAG pipeline uses TF-IDF char n-gram cosine similarity; includes abuse detection, staff-call triggers, coupon/point handling, and 9 payment methods.
+</td>
+</tr>
+</table>
 
 ---
 
-### [QuickDraw Generation (SketchGPT)](https://github.com/SarahCho0/QuickDraw_Generation) &nbsp;`Individual`
-> Transformer-based sketch generation model — paper implementation from scratch
+### 🔬 Deep Technical Work
 
-`PyTorch` `CUDA (RTX 3090)` `Scikit-learn` `Google QuickDraw`
+<table>
+<tr>
+<td width="50%" valign="top">
 
-Implements §3.4 of the SketchGPT paper: a decoder-only Transformer (8L · 8H · d=512) pre-trained on 10 vehicle classes from QuickDraw, then fine-tuned per class to eliminate category bleed. Full pipeline — stroke-3 preprocessing, primitive tokenization, AMP training with cosine LR, class-conditional generation with top-k sampling.
+#### [SketchGPT — QuickDraw Generation](https://github.com/SarahCho0/QuickDraw_Generation)
+**Paper Implementation from Scratch — Transformer Sketch Generation**
 
----
+`Individual` &nbsp;|&nbsp; `RTX 3090 · AMP Training`
 
-### [ANN Lending Club](https://github.com/SarahCho0/ANN_Lendingclub) &nbsp;`Team`
-> ANN-based credit risk scoring and portfolio optimization on 1.2M loan records
+Full reimplementation of §3.4 of the SketchGPT paper.
+- Decoder-only Transformer: **8L · 8H · d=512**
+- Pre-trained on 10 QuickDraw vehicle classes
+- Fine-tuned per-class to eliminate category bleed
+- Full pipeline: stroke-3 preprocessing → primitive tokenization → cosine LR → top-k sampling
+
+`PyTorch` `CUDA` `Scikit-learn` `Google QuickDraw`
+
+</td>
+<td width="50%" valign="top">
+
+#### [ANN Lending Club](https://github.com/SarahCho0/ANN_Lendingclub)
+**Credit Risk Scoring & Portfolio Optimization on 1.2M Records**
+
+`Team` &nbsp;|&nbsp; `SNU Statistical Data Science`
+
+End-to-end financial ML pipeline:
+- Feature engineering on **1.2M+ LendingClub records**
+- ANN with BatchNorm + Dropout + cost-sensitive class weighting
+- Top-K portfolio selection optimized by **weighted Sharpe Ratio**
+- Bootstrap validation (N=1000) with 95% CI
+- **25–45% benchmark improvement**
 
 `Python` `Keras/TensorFlow` `Polars` `Jupyter Notebook`
 
-End-to-end pipeline: feature engineering on 1.2M+ LendingClub records, ANN with BatchNorm + Dropout, cost-sensitive sample weights for class imbalance, and Top-K portfolio selection optimized by weighted Sharpe Ratio. Bootstrap validation (N=1000) with 95% CI. Benchmark improvement of 25–45%. SNU Statistical Data Science course project.
+</td>
+</tr>
+</table>
 
 ---
 
-### [Historical Figures Chatbot](https://github.com/SarahCho0/historical-figure-chatbot) &nbsp;`Individual`
-> Browser-based chatbot to converse with historical figures — per-figure themes and modes
+### 🎨 Creative AI & UI
 
-`Vanilla JS` `HTML/CSS` `GPT-4o` `OpenAI API`
+<table>
+<tr>
+<td width="33%" valign="top">
 
-Zero-install single-file app featuring 10+ historical figures (Einstein, Gandhi, Sejong, da Vinci…), each with a unique visual theme, font, and color palette. Four conversation modes per figure: Normal · Deep Reflection · Historical Context · Teaching + a figure-specific specialty mode (Thought Experiments, Strategic Analysis, etc.). EN/KR bilingual UI.
+#### [Historical Figures Chatbot](https://github.com/SarahCho0/historical-figure-chatbot)
+**Converse with History — Zero Install**
 
----
+`Individual`
 
-### [AI Story Generator (Picture Story)](https://github.com/SarahCho0/ai-story-generator) &nbsp;`Individual`
-> Upload images, pick an emotion, get a story — GPT-4o Vision, no install required
+10+ historical figures (Einstein, Gandhi, Sejong, da Vinci…), each with a **unique visual theme, font, and color palette**. 4 conversation modes per figure + a figure-specific specialty mode. EN/KR bilingual.
 
-`Vanilla JS` `HTML/CSS` `GPT-4o Vision` `OpenAI API`
+`Vanilla JS` `HTML/CSS` `GPT-4o`
 
-Single-file browser app with 18+ dynamic emotion themes that transform the page palette and typography on selection. Multi-image upload (drag & drop) with order-preserving story sequencing. GPT-4o analyzes all images and generates a cohesive narrative. EN/KR toggle. SNU AI Application Lab Exercise.
+</td>
+<td width="33%" valign="top">
 
----
+#### [AI Story Generator](https://github.com/SarahCho0/ai-story-generator)
+**Upload Images → Pick Emotion → Get a Story**
 
-### [Samsung Audit RAG](https://github.com/njungyeon/samsung-audit-rag) &nbsp;`Team`
-> RAG-based document Q&A system for Samsung audit reports
+`Individual` &nbsp;|&nbsp; `SNU AI Lab`
+
+18+ dynamic emotion themes that transform the page palette live. Drag-and-drop multi-image upload with order-preserving narrative. GPT-4o Vision analyzes all images into one cohesive story. EN/KR toggle.
+
+`Vanilla JS` `HTML/CSS` `GPT-4o Vision`
+
+</td>
+<td width="33%" valign="top">
+
+#### [Samsung Audit RAG](https://github.com/njungyeon/samsung-audit-rag)
+**Enterprise Document Q&A**
+
+`Team`
+
+Retrieval-Augmented Generation pipeline for querying Samsung internal audit reports. End-to-end RAG architecture with LLM-backed document Q&A.
 
 `Python` `RAG` `LLM`
 
-Retrieval-Augmented Generation pipeline for querying internal audit documents. Contributed as a team member.
+</td>
+</tr>
+</table>
 
 ---
 
-## 📊 Stats
+## 📊 GitHub Stats
 
-<p align="center">
-  <img height="155" src="https://github-readme-stats.vercel.app/api?username=SarahCho0&show_icons=true&hide_border=true&theme=default" />
-  <img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=default" />
-</p>
+<div align="center">
+
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=SarahCho0&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&icon_color=6366f1&text_color=c9d1d9" />
+&nbsp;
+<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9" />
+
+<br/><br/>
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=SarahCho0&theme=tokyonight&hide_border=true&background=0d1117&ring=6366f1&fire=6366f1&currStreakLabel=6366f1)](https://git.io/streak-stats)
+
+</div>
 
 ---
 
 ## 📬 Contact
 
-GitHub &nbsp;→&nbsp; [github.com/SarahCho0](https://github.com/SarahCho0)
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-SarahCho0-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SarahCho0)
+
+</div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=120&section=footer" width="100%"/>
