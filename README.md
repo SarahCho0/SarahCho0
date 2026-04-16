@@ -127,22 +127,6 @@ Built on fully scraped Paik's Coffee menu (100% parsed with nutrition & allergy 
 <tr>
 <td width="50%" valign="top">
 
-#### [SketchGPT — QuickDraw Generation](https://github.com/SarahCho0/QuickDraw_Generation)
-**Paper Implementation from Scratch — Transformer Sketch Generation**
-
-`Individual` &nbsp;|&nbsp; `RTX 3090 · AMP Training`
-
-Full reimplementation of §3.4 of the SketchGPT paper.
-- Decoder-only Transformer: **8L · 8H · d=512**
-- Pre-trained on 10 QuickDraw vehicle classes
-- Fine-tuned per-class to eliminate category bleed
-- Full pipeline: stroke-3 preprocessing → primitive tokenization → cosine LR → top-k sampling
-
-`PyTorch` `CUDA` `Scikit-learn` `Google QuickDraw`
-
-</td>
-<td width="50%" valign="top">
-
 #### [ANN Lending Club](https://github.com/SarahCho0/ANN_Lendingclub)
 **Credit Risk Scoring & Portfolio Optimization on 1.2M Records**
 
@@ -158,12 +142,7 @@ End-to-end financial ML pipeline:
 `Python` `Keras/TensorFlow` `Polars` `Jupyter Notebook`
 
 </td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td valign="top">
+<td width="50%" valign="top">
 
 #### [Samsung Audit RAG](https://github.com/njungyeon/samsung-audit-rag)
 **End-to-end RAG Pipeline for Samsung Audit Reports — Raw HTML → Vector DB → Agentic Q&A**
@@ -183,6 +162,35 @@ Full RAG system processing 10 years of Samsung Electronics audit reports (`.htm/
 </tr>
 </table>
 
+<table>
+<tr>
+<td valign="top">
+
+#### [SketchGPT — QuickDraw Generation](https://github.com/SarahCho0/QuickDraw_Generation)
+**Paper Implementation from Scratch — Decoder-only Transformer for Sequential Sketch Generation**
+
+`Individual` &nbsp;|&nbsp; `RTX 3090 · AMP Training · Google QuickDraw`
+
+Full ground-up reimplementation of §3.4 of the SketchGPT paper — no reference codebase, built entirely from the paper spec.
+
+**Architecture:** Decoder-only Transformer — **8 layers · 8 heads · d_model=512** — treating sketches as sequences of discrete stroke tokens rather than pixels. Pretrained on 10 vehicle classes from Google QuickDraw.
+
+**The core challenge — category bleed:** A single model pretrained across multiple classes conflated visual features (cars bleeding into planes, bikes into motorcycles). Solved by **per-class fine-tuning**: the shared backbone captures universal stroke grammar; class-specific heads learn category-distinct generation patterns.
+
+**Full pipeline built from scratch:**
+- **Stroke-3 format preprocessing** — raw (x, y, pen_state) point sequences normalized and tokenized into primitive stroke units
+- **AMP training** with `torch.cuda.amp` for mixed-precision on RTX 3090 — ~2× memory efficiency enabling larger batch sizes
+- **Cosine LR scheduling** with warmup — stabilizes transformer training on sequential stroke data
+- **Class-conditional top-k sampling** at inference — temperature-controlled diversity with per-class quality tuning
+
+**Why this stands out:** Generative models for sequential vector data (vs. raster images) require fundamentally different tokenization, loss functions, and sampling strategies — this project covers all of them end-to-end from a paper, not a tutorial.
+
+`PyTorch` `CUDA` `Scikit-learn` `Google QuickDraw`
+
+</td>
+</tr>
+</table>
+
 ---
 
 ### 🎨 Creative AI & UI
@@ -196,9 +204,21 @@ Full RAG system processing 10 years of Samsung Electronics audit reports (`.htm/
 
 `Individual`
 
-10+ historical figures (Einstein, Gandhi, Sejong, da Vinci…), each with a **unique visual theme, font, and color palette**. 4 conversation modes per figure + a figure-specific specialty mode. EN/KR bilingual.
+Single-file browser app — no server, no install, just open and talk to history.
 
-`Vanilla JS` `HTML/CSS` `GPT-4o`
+10+ historical figures (Einstein, Gandhi, Sejong, da Vinci, Cleopatra…), each with a **fully unique visual identity**: custom color palette, typography, and layout theme that changes the entire page on selection.
+
+**4 conversation modes per figure:**
+- `Normal` — general conversation in character
+- `Deep Reflection` — philosophical, introspective responses
+- `Historical Context` — situates answers in the figure's era
+- `Teaching` — explains concepts as the figure would teach them
+
+**+ 1 figure-specific specialty mode** (e.g. Einstein → Thought Experiments, Sun Tzu → Strategic Analysis, Sejong → Linguistic Analysis)
+
+**EN/KR bilingual UI** — full language toggle with localized prompts per figure.
+
+`Vanilla JS` `HTML/CSS` `GPT-4o` `OpenAI API`
 
 </td>
 <td width="50%" valign="top">
@@ -206,11 +226,20 @@ Full RAG system processing 10 years of Samsung Electronics audit reports (`.htm/
 #### [AI Story Generator](https://github.com/SarahCho0/ai-story-generator)
 **Upload Images → Pick Emotion → Get a Story**
 
-`Individual` &nbsp;|&nbsp; `SNU AI Lab`
+`Individual` &nbsp;|&nbsp; `SNU AI Application Lab`
 
-18+ dynamic emotion themes that transform the page palette live. Drag-and-drop multi-image upload with order-preserving narrative. GPT-4o Vision analyzes all images into one cohesive story. EN/KR toggle.
+Single-file browser app — drag, drop, and read. No install, no backend.
 
-`Vanilla JS` `HTML/CSS` `GPT-4o Vision`
+**18+ dynamic emotion themes** — selecting an emotion instantly transforms the entire page: background gradient, font family, color palette, and text mood all update live to match (e.g. Joy → warm yellows + rounded font; Melancholy → muted blues + serif).
+
+**Multi-image pipeline:**
+- Drag-and-drop upload with visual reordering
+- Order is preserved as narrative sequence — image 1 sets the scene, image N closes it
+- GPT-4o Vision analyzes **all images together** in a single prompt, generating one cohesive story rather than per-image captions
+
+**EN/KR toggle** — UI language and generated story language switch simultaneously.
+
+`Vanilla JS` `HTML/CSS` `GPT-4o Vision` `OpenAI API`
 
 </td>
 </tr>
