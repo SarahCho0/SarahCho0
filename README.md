@@ -4,12 +4,6 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=6366F1&center=true&vCenter=true&width=640&lines=End-to-end+AI+Systems+Builder+🚀;3D+Vision+·+Generative+Models+·+FinTech;Research-level+models+→+Deployed+products;Paper+implementations+from+scratch+📄)](https://git.io/typing-svg)
 
-<br/>
-
-![Profile Views](https://komarev.com/ghpvc/?username=SarahCho0&style=for-the-badge&color=6366f1&label=PROFILE+VIEWS)
-&nbsp;
-[![GitHub followers](https://img.shields.io/github/followers/SarahCho0?style=for-the-badge&color=6366f1&labelColor=1e1b4b&label=FOLLOWERS)](https://github.com/SarahCho0)
-
 </div>
 
 ---
@@ -244,13 +238,7 @@ Multi-image drag-and-drop with order-preserving narrative: GPT-4o Vision analyze
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=SarahCho0&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&icon_color=6366f1&text_color=c9d1d9" />
-&nbsp;
 <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9" />
-
-<br/><br/>
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=SarahCho0&theme=tokyonight&hide_border=true&background=0d1117&ring=6366f1&fire=6366f1&currStreakLabel=6366f1)](https://git.io/streak-stats)
 
 </div>
 
@@ -261,6 +249,10 @@ Multi-image drag-and-drop with order-preserving narrative: GPT-4o Vision analyze
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-SarahCho0-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SarahCho0)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-hyeonju--cho-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hyeonju-cho-b9b441312)
+&nbsp;
+[![Email](https://img.shields.io/badge/Email-chohjeonju5640@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:chohjeonju5640@gmail.com)
 
 </div>
 
