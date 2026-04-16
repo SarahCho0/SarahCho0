@@ -159,8 +159,11 @@ End-to-end financial ML pipeline:
 
 </td>
 </tr>
+</table>
+
+<table>
 <tr>
-<td colspan="2" valign="top">
+<td valign="top">
 
 #### [Samsung Audit RAG](https://github.com/njungyeon/samsung-audit-rag)
 **End-to-end RAG Pipeline for Samsung Audit Reports — Raw HTML → Vector DB → Agentic Q&A**
