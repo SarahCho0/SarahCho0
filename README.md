@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=6366F1&center=true&vCenter=true&width=640&lines=End-to-end+AI+Systems+Builder+🚀;3D+Vision+·+Generative+Models+·+FinTech;Research-level+models+→+Deployed+products;Paper+implementations+from+scratch+📄)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=6366F1&center=true&vCenter=true&width=640&lines=End-to-end+AI+Systems+Builder+🚀;3D+Vision+·+Generative+Models+·+FinTech;Research-level+models+→+Deployed+products;Enterprise+AI+in+Production+🏢;Paper+implementations+from+scratch+📄)](https://git.io/typing-svg)
 
 </div>
 
@@ -16,7 +16,7 @@
 <table>
 <tr>
   <td>🔭&nbsp;<b>Current Focus</b></td>
-  <td>Multimodal AI &amp; LLM integration</td>
+  <td>Enterprise AI in production — LLM deliberation &amp; hybrid retrieval systems at Eugene Group</td>
 </tr>
 <tr>
   <td>🧠&nbsp;<b>Signature Strength</b></td>
@@ -61,12 +61,16 @@
 
 **LLM / Generative AI**
 
+![Claude](https://img.shields.io/badge/Claude%20Agent-D97757?style=for-the-badge&logo=claude&logoColor=white)
 ![GPT-4o](https://img.shields.io/badge/GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini%202.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![RAG](https://img.shields.io/badge/TF--IDF%20RAG-0EA5E9?style=for-the-badge&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG%20%C2%B7%20BM25%20%C2%B7%20Ontology-0EA5E9?style=for-the-badge&logoColor=white)
 
 **App / UI / Data**
 
+![Next.js](https://img.shields.io/badge/Next.js%2016-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Gradio](https://img.shields.io/badge/Gradio-F97316?style=for-the-badge&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -77,6 +81,54 @@
 ---
 
 ## 🚀 Featured Projects
+
+### 🏢 In Production — Enterprise AI @ Eugene Group
+
+> **Both systems below are deployed and in live production use** at Eugene Group (AICoE), built during my work there as an AI engineer.
+> Repos are private mirrors of the corporate GitLab (🔒) — detailed code walkthrough available on request.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### [투자심의 AI — Investment Deliberation Engine](https://github.com/SarahCho0/-Project-Eugene-Investment-Decision) 🔒
+**AI That Deliberates Investment Committee Cases — Classify → Score → Verify → Report**
+
+`Enterprise · In Production` &nbsp;|&nbsp; `Python engine (8.5k lines) + Next.js 16 (22k+ lines) · 290+ commits`
+
+> **Deal documents in → committee-grade deliberation report out**, with human-in-the-loop checkpoints throughout.
+
+- **Document ingest**: pptx/docx/PDF → LibreOffice conversion → **Claude-agent visual canonicalization** (tables & charts read page-by-page), with dependency preflight and source manifests for auditability
+- **Deliberation pipeline**: case classification → per-axis scoring against anchor rubrics, **every score backed by cited evidence** → mandatory-item verification → valuation cross-checks
+- **Verification layer**: citation grounding, consistency & invariant checks, gap detection — the engine flags what it *can't* support instead of guessing
+- **HITL by design**: structured reviewer questions, dissenting perspectives surfaced as a 2×2 stance grid, tunable engine settings
+- Real-time progress UI (stage stat bands, per-criterion score cards) + report renderer following the firm's official 심의 report format; **golden-test pytest suite** pins engine behavior
+
+`Python` `Next.js 16` `TypeScript` `Claude Agent` `pytest`
+
+</td>
+<td width="50%" valign="top">
+
+#### [매칭 AI — Field-Language Product Search](https://github.com/SarahCho0/project-eugene_homecenter) 🔒
+**Slang · Typo · Jargon-Riddled Field Queries → Exact Product Codes**
+
+`Enterprise · In Production` &nbsp;|&nbsp; `3-stage hybrid retrieval · 80+ unit tests`
+
+> **"데부꾸로 1켤레"** (site slang) → the right work glove, ranked Top-5 — live for field workers at Eugene Homecenter.
+
+- **Stage 0 — LLM query parsing**: splits multi-item orders into item/qty rows, *preserving* slang & specs (no premature normalization), fixing only typos
+- **Stage 1 — dual-channel retrieval in parallel**: **group-ontology alias index** ∥ **char n-gram BM25** — union candidate pool, so one channel's miss never loses recall
+- **Stage 2 — LLM narrowing**: Top-5 ranking constrained to the candidate pool (**hallucination guard**), with per-group spec knowledge + transaction-count signals injected
+- **Built the ontology itself**: product-DB cleaning → group/brand ontology build → SQLite management DB ↔ JSON export, plus a data-intake pipeline with auto group classification for new products
+- **FastAPI worker UI** with OCR transcription of handwritten order memos, Excel export & failure logging; Dockerized, plus scheduled **ERP sync** (launchd/Windows)
+
+`Python` `FastAPI` `BM25` `OpenAI` `SQLite` `Docker` `pytest`
+
+</td>
+</tr>
+</table>
+
+---
 
 ### 🏆 Flagship
 
@@ -238,7 +290,10 @@ Multi-image drag-and-drop with order-preserving narrative: GPT-4o Vision analyze
 
 <div align="center">
 
+<img height="160" src="https://github-readme-stats.vercel.app/api?username=SarahCho0&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&icon_color=6366f1&count_private=true&include_all_commits=true" />
 <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9" />
+
+<sub>Stats include private-repo activity — the two production projects above live in private mirrors.</sub>
 
 </div>
 
