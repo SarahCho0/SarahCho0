@@ -290,8 +290,8 @@ Multi-image drag-and-drop with order-preserving narrative: GPT-4o Vision analyze
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=SarahCho0&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&icon_color=6366f1&count_private=true&include_all_commits=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9" />
+<img height="160" src="https://github-readme-stats-sigma-five.vercel.app/api?username=SarahCho0&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&icon_color=6366f1&count_private=true&include_all_commits=true" />
+<img height="160" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9" />
 
 <sub>Stats include private-repo activity — the two production projects above live in private mirrors.</sub>
 
