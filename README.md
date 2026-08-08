@@ -1,8 +1,8 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=220&section=header&text=Hyeonju%20Cho&fontColor=ffffff&fontSize=52&fontAlignY=38&desc=AI%20Engineer%20%7C%20ML%20Researcher&descSize=20&descAlignY=60&descColor=e0e7ff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=6366f1&height=220&section=header&text=Hyeonju%20Cho&fontColor=ffffff&fontSize=52&fontAlignY=38&desc=AI-Native%20Builder%20%7C%20Production%20AI%20Systems&descSize=20&descAlignY=60&descColor=e0e7ff" width="100%"/>
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=6366F1&center=true&vCenter=true&width=640&lines=End-to-end+AI+Systems+Builder+🚀;3D+Vision+·+Generative+Models+·+FinTech;Research-level+models+→+Deployed+products;Enterprise+AI+in+Production+🏢;Paper+implementations+from+scratch+📄)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=6366F1&center=true&vCenter=true&width=640&lines=AI-Native+Builder+🤖;I+direct+AI+agents+—+spec+to+shipped+product;Enterprise+AI+in+Production+🏢;Verification-first:+golden+tests+·+HITL)](https://git.io/typing-svg)
 
 </div>
 
@@ -10,8 +10,8 @@
 
 ## 💡 About Me
 
-> **I build end-to-end AI systems** — from 3D perception pipelines and generative models to RAG applications and quantitative finance tools.  
-> My edge: applying **research-level models to real, usable products** — with equal attention to the math *and* the interface.
+> **I build production AI systems by directing AI coding agents.**  
+> I don't hand-write most of my code — my craft is everything *around* the code: turning messy requirements into specs an agent can't misread, designing verification that catches what AI gets wrong, and shipping to real users.
 
 <table>
 <tr>
@@ -20,11 +20,15 @@
 </tr>
 <tr>
   <td>🧠&nbsp;<b>Signature Strength</b></td>
-  <td>Taking paper-level models all the way to deployed, production-ready systems</td>
+  <td>Spec design &amp; verification — golden tests, HITL checkpoints, citation-grounded outputs</td>
 </tr>
 <tr>
   <td>⚡&nbsp;<b>Differentiator</b></td>
-  <td>Strong on both the deep learning math <em>and</em> the user-facing interface</td>
+  <td>Full transparency about how I work: AI writes the code — I own the decisions, the quality bar, and the outcome</td>
+</tr>
+<tr>
+  <td>🌱&nbsp;<b>Now Learning</b></td>
+  <td>Python &amp; CS fundamentals, from the ground up — to better review what I direct</td>
 </tr>
 <tr>
   <td>🌏&nbsp;<b>Languages</b></td>
@@ -34,7 +38,24 @@
 
 ---
 
-## 🛠 Tech Stack
+## 🤖 How I Build
+
+> **AI writes most of my code. I own everything else.** I'd rather say that upfront than have you discover it in an interview.
+
+My workflow, proven on two production systems at Eugene Group:
+
+- **Requirements → specs** — I read the source-of-truth documents (기획안 · 처리 가이드 · 현업 피드백) and turn them into unambiguous specs; when code and spec disagree, the spec wins
+- **Verification design** — golden-test suites, human-in-the-loop checkpoints, citation-grounded scoring, dependency preflights: systems built to catch what AI gets wrong
+- **Product judgment** — what to build, what to cut, and recognizing when output is wrong *even when it runs*
+- **Iteration with real users** — ship, collect field feedback, fold it back into the spec
+
+Every project below was built this way. Ask me *why* any of them is designed the way it is — that's the part I can talk about for hours.
+
+---
+
+## 🛠 What I Ship With
+
+<sub>Technologies in systems I've shipped — written by AI agents under my direction, chosen and verified by me.</sub>
 
 **Languages**
 
@@ -84,8 +105,8 @@
 
 ### 🏢 In Production — Enterprise AI @ Eugene Group
 
-> **Both systems below are deployed and in live production use** at Eugene Group (AICoE), built during my work there as an AI engineer.
-> Repos are private mirrors of the corporate GitLab (🔒) — detailed code walkthrough available on request.
+> **Both systems below are deployed and in live production use** at Eugene Group (AICoE) — built with the AI-agent workflow described in *How I Build*.
+> Repos are private mirrors of the corporate GitLab (🔒) — detailed design walkthrough available on request.
 
 <table>
 <tr>
@@ -163,7 +184,7 @@ After the team project wrapped, **independently built a Gemini 2.5 Flash LLM mod
 
 AI chatbot **Oji** takes natural language orders in Korean, English, Chinese, and Japanese — managing cart state, handling edge cases, and guiding users through a complete 7-step checkout flow.
 
-**Built every layer from scratch:**
+**Every layer built end-to-end:**
 - Scraped and parsed the full Paik's Coffee menu (**332 items**, 100% coverage including nutrition & allergy data)
 - Custom **TF-IDF char n-gram cosine similarity** RAG for robust menu matching across 4 languages
 - Abuse detection, staff-call triggers, coupon & point systems, 9 payment methods
@@ -223,11 +244,11 @@ Full RAG system processing 10 years of Samsung Electronics audit reports (`.htm/
 <td valign="top">
 
 #### [SketchGPT — QuickDraw Generation](https://github.com/SarahCho0/QuickDraw_Generation)
-**Paper Implementation from Scratch — Decoder-only Transformer for Sequential Sketch Generation**
+**Paper Reimplementation — Decoder-only Transformer for Sequential Sketch Generation**
 
 `Individual` &nbsp;|&nbsp; `RTX 3090 · AMP Training · Google QuickDraw`
 
-> **No reference code. Built entirely from the paper spec.**
+> **No reference implementation existed — rebuilt from the paper spec alone.**
 
 Full reimplementation of §3.4 of the SketchGPT paper. Decoder-only Transformer (**8L · 8H · d=512**) treating sketches as stroke token sequences — not pixels. Pretrained on 10 Google QuickDraw vehicle classes.
 
@@ -235,7 +256,7 @@ Full reimplementation of §3.4 of the SketchGPT paper. Decoder-only Transformer 
 
 **Pipeline:** Stroke-3 preprocessing → primitive tokenization → AMP training (`torch.cuda.amp`, ~2× memory efficiency) → cosine LR with warmup → class-conditional top-k sampling at inference.
 
-Generating sequential vector data requires fundamentally different tokenization, loss design, and sampling vs. raster models — all covered end-to-end from paper, not tutorial.
+Generating sequential vector data requires fundamentally different tokenization, loss design, and sampling vs. raster models — the project covers that full chain, working from the paper rather than a tutorial.
 
 `PyTorch` `CUDA` `Scikit-learn` `Google QuickDraw`
 
