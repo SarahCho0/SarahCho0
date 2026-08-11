@@ -16,7 +16,7 @@
 <table>
 <tr>
   <td>🔭&nbsp;<b>Current Focus</b></td>
-  <td>Enterprise AI in production — LLM deliberation &amp; hybrid retrieval systems at Eugene Group</td>
+  <td>Enterprise AI in production — LLM deliberation &amp; hybrid retrieval systems shipped at Eugene Group (AI CoE, Apr–Aug 2026)</td>
 </tr>
 <tr>
   <td>🧠&nbsp;<b>Signature Strength</b></td>
@@ -115,14 +115,14 @@ Every project below was built this way. Ask me *why* any of them is designed the
 #### [투자심의 AI — Investment Deliberation Engine](https://github.com/SarahCho0/-Project-Eugene-Investment-Decision) 🔒
 **AI That Deliberates Investment Committee Cases — Classify → Score → Verify → Report**
 
-`Enterprise · In Production` &nbsp;|&nbsp; `Python engine (8.5k lines) + Next.js 16 (22k+ lines) · 290+ commits`
+`Enterprise · In Production` &nbsp;|&nbsp; `Python engine (8.5k lines) + Next.js 16 (22k+ lines) · 449 pytest tests`
 
 > **Deal documents in → committee-grade deliberation report out**, with human-in-the-loop checkpoints throughout.
 
 - **Document ingest**: pptx/docx/PDF → LibreOffice conversion → **Claude-agent visual canonicalization** (tables & charts read page-by-page), with dependency preflight and source manifests for auditability
 - **Deliberation pipeline**: case classification → per-axis scoring against anchor rubrics, **every score backed by cited evidence** → mandatory-item verification → valuation cross-checks
-- **Verification layer**: citation grounding, consistency & invariant checks, gap detection — the engine flags what it *can't* support instead of guessing
-- **HITL by design**: structured reviewer questions, dissenting perspectives surfaced as a 2×2 stance grid, tunable engine settings
+- **Verification layer**: citation grounding (source files, pages & quotes string-matched against the ingested corpus — zero LLM calls), consistency & invariant checks, gap detection — the engine flags what it *can't* support instead of guessing
+- **HITL by design**: a readiness-diagnosis gate pauses every review for a human go/no-go before full deliberation, structured reviewer questions, dissenting perspectives surfaced as a 2×2 stance grid, tunable engine settings
 - Real-time progress UI (stage stat bands, per-criterion score cards) + report renderer following the firm's official 심의 report format; **golden-test pytest suite** pins engine behavior
 
 `Python` `Next.js 16` `TypeScript` `Claude Agent` `pytest`
@@ -133,14 +133,14 @@ Every project below was built this way. Ask me *why* any of them is designed the
 #### [매칭 AI — Field-Language Product Search](https://github.com/SarahCho0/project-eugene_homecenter) 🔒
 **Slang · Typo · Jargon-Riddled Field Queries → Exact Product Codes**
 
-`Enterprise · In Production` &nbsp;|&nbsp; `3-stage hybrid retrieval · 80+ unit tests`
+`Enterprise · In Production` &nbsp;|&nbsp; `3-stage hybrid retrieval · Hit@10 88% · 600+ tests`
 
 > **"데부꾸로 1켤레"** (site slang) → the right work glove, ranked Top-5 — live for field workers at Eugene Homecenter.
 
 - **Stage 0 — LLM query parsing**: splits multi-item orders into item/qty rows, *preserving* slang & specs (no premature normalization), fixing only typos
 - **Stage 1 — dual-channel retrieval in parallel**: **group-ontology alias index** ∥ **char n-gram BM25** — union candidate pool, so one channel's miss never loses recall
 - **Stage 2 — LLM narrowing**: Top-5 ranking constrained to the candidate pool (**hallucination guard**), with per-group spec knowledge + transaction-count signals injected
-- **Built the ontology itself**: product-DB cleaning → group/brand ontology build → SQLite management DB ↔ JSON export, plus a data-intake pipeline with auto group classification for new products
+- **Built the ontology itself**: product-DB cleaning → group/brand ontology build (**1.9K groups · 7.8K field aliases** over a 24K-SKU catalog) → SQLite management DB ↔ JSON export, plus a data-intake pipeline with auto group classification for new products
 - **FastAPI worker UI** with OCR transcription of handwritten order memos, Excel export & failure logging; Dockerized, plus scheduled **ERP sync** (launchd/Windows)
 
 `Python` `FastAPI` `BM25` `OpenAI` `SQLite` `Docker` `pytest`
@@ -160,7 +160,7 @@ Every project below was built this way. Ask me *why* any of them is designed the
 #### [YOLOE3R](https://github.com/SarahCho0/team6_yoloe3r) · [LLM Module ↗](https://github.com/SarahCho0/yoloe3r_llm)
 **Multi-angle 3D Reconstruction + LLM Interior Simulation**
 
-`Team + Individual Extension` &nbsp;|&nbsp; `175+ commits`
+`Team + Individual Extension` &nbsp;|&nbsp; `SOTA 3D vision stack · deployed Gradio demo`
 
 > **SOTA 3D vision stack → deployed Gradio demo → independently extended with LLM**
 
@@ -207,14 +207,14 @@ AI chatbot **Oji** takes natural language orders in Korean, English, Chinese, an
 #### [ANN Lending Club](https://github.com/SarahCho0/ANN_Lendingclub)
 **Credit Risk Scoring & Portfolio Optimization on 1.2M Records**
 
-`Team` &nbsp;|&nbsp; `SNU Statistical Data Science`
+`Individual` &nbsp;|&nbsp; `SNU Statistical Data Science`
 
 End-to-end financial ML pipeline:
 - Feature engineering on **1.2M+ LendingClub records**
 - ANN with BatchNorm + Dropout + cost-sensitive class weighting
 - Top-K portfolio selection optimized by **weighted Sharpe Ratio**
 - Bootstrap validation (N=1000) with 95% CI
-- **25–45% benchmark improvement**
+- **~25% benchmark improvement**
 
 `Python` `Keras/TensorFlow` `Polars` `Jupyter Notebook`
 
@@ -311,10 +311,10 @@ Multi-image drag-and-drop with order-preserving narrative: GPT-4o Vision analyze
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats-sigma-five.vercel.app/api?username=SarahCho0&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&icon_color=6366f1&count_private=true&include_all_commits=true" />
-<img height="160" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9" />
+<img height="160" src="https://github-readme-stats.zohan.tech/api?username=SarahCho0&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9&icon_color=6366f1&count_private=true&include_all_commits=true" />
+<img height="160" src="https://github-readme-stats.zohan.tech/api/top-langs/?username=SarahCho0&layout=compact&hide_border=true&theme=tokyonight&bg_color=0d1117&title_color=6366f1&text_color=c9d1d9" />
 
-<sub>Stats include private-repo activity — the two production projects above live in private mirrors.</sub>
+<sub>The two production projects above live in private mirrors, so much of that activity doesn't appear in these public stats.</sub>
 
 </div>
 
