@@ -107,6 +107,7 @@ Every project below was built this way. Ask me *why* any of them is designed the
 
 > **Both systems below are deployed and in live production use** at Eugene Group (AICoE) — built with the AI-agent workflow described in *How I Build*.
 > Repos are private mirrors of the corporate GitLab (🔒) — detailed design walkthrough available on request.
+> The verification patterns from both systems are **open-sourced in [CiteGuard](https://github.com/SarahCho0/citeguard)** ↓
 
 <table>
 <tr>
@@ -144,6 +145,33 @@ Every project below was built this way. Ask me *why* any of them is designed the
 - **FastAPI worker UI** with OCR transcription of handwritten order memos, Excel export & failure logging; Dockerized, plus scheduled **ERP sync** (launchd/Windows)
 
 `Python` `FastAPI` `BM25` `OpenAI` `SQLite` `Docker` `pytest`
+
+</td>
+</tr>
+</table>
+
+---
+
+### 🛡️ Open Source
+
+<table>
+<tr>
+<td valign="top">
+
+#### [CiteGuard — Verification Toolkit for LLM Applications](https://github.com/SarahCho0/citeguard)
+**Deterministic Citation Gates · Retrieval Eval Harness · Golden-Test Runner**
+
+`Open Source · v0.1.0` &nbsp;|&nbsp; `430 tests · zero core dependencies · zero LLM calls in verification`
+
+> **The verification patterns I designed on the two production systems above — generalized into a public, reusable library.** If you verify an LLM with another LLM, the verifier itself becomes probabilistic; CiteGuard keeps the verification layer deterministic, auditable, and provable.
+
+- **Citation Gate**: verifies every citation (source file · page · quote) in an LLM report against the ingested corpus by deterministic string comparison — six verdicts from `verified` to `quote_not_found` (suspected hallucination)
+- **Eval Harness**: Hit@K / MRR over labeled query sets + **stage-level error diagnosis** — tells you *which pipeline stage* lost the gold answer (recall problem vs ranking problem)
+- **Golden Runner**: pins verified outputs as baselines; regressions fail with a readable structural diff, and baselines update only on explicit approval
+- **Math-grounded design**: edit-distance metric axioms verified by property tests; branch-and-bound pruning proven result-preserving — full write-up in [MATH.md](https://github.com/SarahCho0/citeguard/blob/main/MATH.md)
+- Runnable demos: Korean field-slang hybrid search (alias ∥ char-bigram BM25) + investment-report citation gate, with a Streamlit dashboard
+
+`Python` `pytest` `BM25` `Edit Distance` `Streamlit`
 
 </td>
 </tr>
