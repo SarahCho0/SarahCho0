@@ -163,15 +163,17 @@ Every project below was built this way. Ask me *why* any of them is designed the
 
 `Open Source · v0.1.0` &nbsp;|&nbsp; `430 tests · zero core dependencies · zero LLM calls in verification`
 
+### ▶ [**Try the live demo**](https://sarahcho0.github.io/citeguard/) — the real algorithms, running in your browser. No install.
+
 > **The verification patterns I designed on the two production systems above — generalized into a public, reusable library.** If you verify an LLM with another LLM, the verifier itself becomes probabilistic; CiteGuard keeps the verification layer deterministic, auditable, and provable.
 
 - **Citation Gate**: verifies every citation (source file · page · quote) in an LLM report against the ingested corpus by deterministic string comparison — six verdicts from `verified` to `quote_not_found` (suspected hallucination)
 - **Eval Harness**: Hit@K / MRR over labeled query sets + **stage-level error diagnosis** — tells you *which pipeline stage* lost the gold answer (recall problem vs ranking problem)
 - **Golden Runner**: pins verified outputs as baselines; regressions fail with a readable structural diff, and baselines update only on explicit approval
 - **Math-grounded design**: edit-distance metric axioms verified by property tests; branch-and-bound pruning proven result-preserving — full write-up in [MATH.md](https://github.com/SarahCho0/citeguard/blob/main/MATH.md)
-- Runnable demos: Korean field-slang hybrid search (alias ∥ char-bigram BM25) + investment-report citation gate, with a Streamlit dashboard
+- **[Interactive web demo](https://sarahcho0.github.io/citeguard/)**: edit citations and watch verdicts flip with character-level diffs, verify quotes against your own uploaded document, drive the hybrid search pipeline stage by stage, and move a fusion weight to watch the golden diff catch ranking regressions — a client-side JS port of the engine, **parity-checked against Python in CI**
 
-`Python` `pytest` `BM25` `Edit Distance` `Streamlit`
+`Python` `JavaScript` `pytest` `BM25` `Edit Distance` `GitHub Actions CI`
 
 </td>
 </tr>
