@@ -85,7 +85,7 @@ Every project below was built this way. Ask me *why* any of them is designed the
 ![Claude](https://img.shields.io/badge/Claude%20Agent-D97757?style=for-the-badge&logo=claude&logoColor=white)
 ![GPT-4o](https://img.shields.io/badge/GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini%202.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG%20%C2%B7%20BM25%20%C2%B7%20Ontology-0EA5E9?style=for-the-badge&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG%20%C2%B7%20BM25%20%C2%B7%20Taxonomy-0EA5E9?style=for-the-badge&logoColor=white)
 
 **App / UI / Data**
 
@@ -139,9 +139,9 @@ Every project below was built this way. Ask me *why* any of them is designed the
 > **"데부꾸로 1켤레"** (site slang) → the right work glove, ranked Top-5 — live for field workers at Eugene Homecenter.
 
 - **Stage 0 — LLM query parsing**: splits multi-item orders into item/qty rows, *preserving* slang & specs (no premature normalization), fixing only typos
-- **Stage 1 — dual-channel retrieval in parallel**: **group-ontology alias index** ∥ **char n-gram BM25** — union candidate pool, so one channel's miss never loses recall
+- **Stage 1 — dual-channel retrieval in parallel**: **field-term thesaurus (alias index)** ∥ **char n-gram BM25** — union candidate pool, so one channel's miss never loses recall
 - **Stage 2 — LLM narrowing**: Top-5 ranking constrained to the candidate pool (**hallucination guard**), with per-group spec knowledge + transaction-count signals injected
-- **Built the ontology itself**: product-DB cleaning → group/brand ontology build (**1.9K groups · 7.8K field aliases** over a 24K-SKU catalog) → SQLite management DB ↔ JSON export, plus a data-intake pipeline with auto group classification for new products
+- **Built the taxonomy itself**: product-DB cleaning → group/brand taxonomy + alias-thesaurus build (**1.9K groups · 7.8K field aliases** over a 24K-SKU catalog) → SQLite management DB ↔ JSON export, plus a data-intake pipeline with auto group classification for new products
 - **FastAPI worker UI** with OCR transcription of handwritten order memos, Excel export & failure logging; Dockerized, plus scheduled **ERP sync** (launchd/Windows)
 
 `Python` `FastAPI` `BM25` `OpenAI` `SQLite` `Docker` `pytest`
