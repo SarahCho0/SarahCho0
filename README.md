@@ -2,11 +2,11 @@
 
 ## 💡 About Me
 
-> I build production AI systems by directing AI coding agents — I don't hand-write most of the code; my craft is the spec, the verification, and the judgment around it.
+> I build production AI systems end to end. I own the architecture, specs, and verification, and use AI coding agents to ship faster without lowering the quality bar.
 
 - **Now**: Enterprise AI in production at Eugene Group (AI CoE, Apr–Aug 2026) — LLM deliberation & hybrid retrieval systems
 - **How I work**: requirements → unambiguous specs → golden-test / HITL verification → ship → iterate on field feedback
-- **What I own**: the decisions, the quality bar, the outcome — full transparency that AI writes the code
+- **What I own**: the decisions, the quality bar, the outcome — agents speed up the build; I'm accountable for every line that ships
 
 ---
 
